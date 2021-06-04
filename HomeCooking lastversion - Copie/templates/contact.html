@@ -1,0 +1,40 @@
+{% extends "/base.html" %}
+{% block title %}Contact{% endblock %}
+
+{% block content%}
+<div class="container" style=" padding-bottom: 5%; " >
+    <div class="row pt-5 ">
+       <div class="col-lg-4 col-md-8 col-xd-12">
+          <p>For any questions or claim contact us :<br>Please use the form next to get in touch</p>
+        </div>
+       <div class="col-lg-8 col-md-4 col-xd-12">     
+        <form name='form' action='contact' method='POST' enctype='multipart/form-data'>           
+            <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Name</b> </label>
+            <input  class="form-control" id="exampleFormControlInput1" placeholder="" name='name'  type='text'value=''>
+            <small id="name" class="form-text text-muted">Full Name</small>          
+          </div>    
+          <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Email address</b></label>
+            <input class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"  name='email' type='text' value=''>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Phone number</b> </label>
+            <input class="form-control" id="exampleFormControlInput1" placeholder="" name='phone' type='text' value='' > 
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Home adress</b> </label>
+            <input class="form-control" id="exampleFormControlInput1" placeholder="" name='adress' type='text' value='' > 
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1"><b>Leave a message</b></label>
+            <textarea class="form-control"  name="message" id="msg"  rows="3"></textarea>
+          </div>
+          
+          <button  class="btn " type="submit" value="Send" >Send</button>
+
+        </form>
+        </div>
+      </div>
+</div>
+  {% endblock content %}
